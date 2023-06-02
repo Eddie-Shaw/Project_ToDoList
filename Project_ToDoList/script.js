@@ -21,8 +21,10 @@ addButton.addEventListener('click', (event) => {
         h4.className = 'listBox';
         // Change the value to Input Value
         h4.textContent = inputField.value;
-        // Adds a <button> to the <h4>
-        h4.appendChild(addDeleteButton())
+        // Adds the OK <button> to the <h4>
+        h4.appendChild(addDoneButton());
+        // Adds the delete <button> to the <h4>
+        h4.appendChild(addDeleteButton());
         // Returns the Input to none
         inputField.value = '';
     }
@@ -53,4 +55,23 @@ const addDeleteButton = () => {
     })
     // Returns the <button>
     return deleteButton
+}
+
+// Creates a new <button>
+const addDoneButton = () => {
+    const doneButton = document.createElement('button');
+    // Change the value to OK
+    doneButton.textContent = 'OK';
+    // Takes the CSS style from doneButton
+    doneButton.className = 'doneButton'
+
+    // done Button interaction when pressed
+    doneButton.addEventListener('click', (event) => {
+        // Takes the value of the parent (<h4> in this case)
+        const task1 = event.target.parentElement;
+        // Adds a line-through (<h4> in this case)
+        task1.style.textDecoration = 'line-through';
+    })
+    // Returns the <button>
+    return doneButton
 }

@@ -80,3 +80,15 @@ button{
 .deleteButton:hover{
     background-color: hsl(0, 100%, 55%);
 }
+
+.doneButton {
+    background-color: hsl(95, 100%, 64%);
+    color: hsl(267, 100%, 35%);
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
+.doneButton:hover{
+    background-color: hsl(95, 100%, 40%);
+}
